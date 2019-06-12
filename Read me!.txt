@@ -1,0 +1,68 @@
+create database BANK_SYSTEM;
+use BANK_SYSTEM;
+create table card(
+card_number int(6) primary key auto_increment
+);
+insert into card
+values('201903');
+insert into card value();
+insert into card value();
+insert into card value();
+insert into card value();
+insert into card value();
+insert into card value();
+insert into card value();
+
+create table staffs(
+job_number int(7) primary key,
+name varchar(20),
+sex  char(1),
+age int(2),
+ID_card bigint(18),
+password int(7),
+photo blob
+);
+insert into staffs
+values('2019001','Kirito','m','19','623001199912081516','9911001',null);
+insert into staffs
+values('2019002','Jerry','m','19','460007200011280017','9911002',null);
+insert into staffs
+values('2019003','gunly','m','19','500243200010083512','9911003',null);
+insert into staffs
+values('2019004','Paul','m','19','650102200006060810','9911004',null);
+create table customers(
+bank_card int(6) primary key,
+ID_card bigint(18) unique,
+name varchar(20),
+sex char(1),
+Eg varchar(5),
+TEL_number bigint(11),
+address varchar(20),
+balance int(12),
+missing char,
+gold int(12),
+password int(6)
+);
+insert into customers values('201901','623001199912081516','Kirito','m','²Ø','18109418765','Hainan', 50000, 'n', 0, 123456);
+insert into customers values('201902','500243200010083512','Gunly','m','ºº','15523837164','Hainan', 20000, 'n', 0, 123456);
+
+create table history(
+bank_card int(6),
+deal_time varchar(30),
+deal_style varchar(10), 
+deal_money int
+);
+
+
+
+
+
+
+
+
+
+
+RUN THIS CODE ON YOUR MYSQL FIRST £¨YOUR MYSQL¡¯S PASSWORD SHOULD BE NULL£©
+THEN RUN THE BANKSYSTEM
+THE ID(for ex.):2019001
+THE PASSWORD(for ex.):9911001
